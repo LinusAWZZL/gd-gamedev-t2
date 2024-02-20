@@ -21,3 +21,11 @@ Gamedev Class Tutorial
 
 - CollisionShape2D
 > When disabled is On, object no longer interacts with other CollisionShapes
+
+- Node Transform
+> Position: relative location from parent object
+> Rotation: objects global rotation, object rotates around it's center
+> Scale: relative scale of the object and all it's components
+> Stone Platform's position is based off of it's position compared to it's parent's center, compared to the viewpoint's location which is global
+
+
