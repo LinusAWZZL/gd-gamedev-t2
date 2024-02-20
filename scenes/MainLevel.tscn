@@ -27,6 +27,7 @@ position = Vector2( 70.625, 40 )
 shape = SubResource( 1 )
 
 [node name="BlueShip" parent="." instance=ExtResource( 2 )]
-position = Vector2( 66, 468 )
+position = Vector2( 71, 461 )
+rotation = -0.340339
 
 [connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]

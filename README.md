@@ -28,4 +28,4 @@ Gamedev Class Tutorial
 > Scale: relative scale of the object and all it's components
 > Stone Platform's position is based off of it's position compared to it's parent's center, compared to the viewpoint's location which is global
 
-
+## New level

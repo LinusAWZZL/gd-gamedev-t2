@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/PlaneZone.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ObjectiveAreaLvl1.gd" type="Script" id=2]
+[ext_resource path="res://scenes/WhiteShip.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Tarmac.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/WhiteShip.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 69.375, 36.25 )
+
+[node name="Level2" type="Node"]
+
+[node name="LandingStrip" type="Node2D" parent="."]
+position = Vector2( 510, 575 )
+
+[node name="Tarmac" parent="LandingStrip" instance=ExtResource( 4 )]
+
+[node name="PlaneZone" type="Node2D" parent="."]
+position = Vector2( 120, 35 )
+script = ExtResource( 1 )
+
+[node name="WhiteShip" parent="PlaneZone" instance=ExtResource( 5 )]
+script = ExtResource( 3 )
+
+[node name="ObjectiveArea" type="Area2D" parent="."]
+position = Vector2( 510, 540 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveArea"]
+scale = Vector2( 2.5, 0.25 )
+shape = SubResource( 1 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Sky" type="Sprite" parent="Background"]
+
+[node name="Ground" type="Sprite" parent="Background"]
+
+[connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]
