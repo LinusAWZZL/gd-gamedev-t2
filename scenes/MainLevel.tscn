@@ -26,9 +26,7 @@ script = ExtResource( 4 )
 position = Vector2( 70.625, 40 )
 shape = SubResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 137, 201 )
-
-[node name="BlueShip" parent="Area2D" instance=ExtResource( 2 )]
+[node name="BlueShip" parent="." instance=ExtResource( 2 )]
+position = Vector2( 66, 468 )
 
 [connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]
