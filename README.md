@@ -37,4 +37,5 @@ Gamedev Class Tutorial
 
 ## New Features
 Added new level (level 1) using Kinematic2D and static obstacles
+
 Added UI Elements (menu) for win screen
