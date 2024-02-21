@@ -28,4 +28,6 @@ Gamedev Class Tutorial
 > Scale: relative scale of the object and all it's components
 > Stone Platform's position is based off of it's position compared to it's parent's center, compared to the viewpoint's location which is global
 
-## New level
+## New Features
+Added new level (level 1) using Kinematic2D and static obstacles
+Added UI Elements (menu) for win screen
